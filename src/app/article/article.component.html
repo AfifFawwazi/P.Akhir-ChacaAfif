@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+
+
+  
+  
+  <h2 style="font-family:Comic Sans MS; text-align:center; color:darkgray">ARTICLE</h2>
+  <br>
+    <div class="row">
+      <div class="col-sm-7"  *ngFor="let article of articles">    
+          <a class="list-group-item clearfix" (click)=onSelected()>
+              <span class="pull-left">
+                  <img 
+                  [src]="article.imagePath"
+                  alt="{{article.name}}" 
+                  class="img-responsive" 
+                  style="height:60px; width:60px;">
+              </span>
+             
+              <div class="center" >
+                  
+                      <div style="margin-bottom: 1px;">
+                      <br>
+                      <span style="font-size: large; font-weight:bold;">&nbsp;{{article.name}} </span>
+                      <input value="Baca Lengkap" type="button" onclick="if 
+                      (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '')
+                       { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; 
+                       this.innerText = ''; this.value = 'Tutup Artikel'; } 
+                       else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; 
+                       this.innerText = ''; this.value = 'Baca Lengkap'; }"></div>
+                       <br>
+                       
+                       
+
+                      <div style="margin: 0px; padding: 5px; border: 1px inset;">
+                      <div style="display: none;">
+                      
+                      <p>{{article.description}}</p>
+                      
+                      </div>
+                      </div>
+                      
+                
+                  
+              </div>
+             
+            </a>
+            <br>
+            
+      </div>
+      
+    </div>
+
+    
+      
+    
+
+
+    
+
+        <br>
+        <br>
+        <br>
+    
+
+
+    
+  
+
+
+</body>
+</html>
+
+

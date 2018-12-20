@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+    <h2 style="font-family:Comic Sans MS; text-align:center; color:darkgray">Pilih Zodiak mu</h2>
+<hr>
+    
+<div class="row">
+  <div class="col-sm-12">
+      
+  
+    <app-item>
+    </app-item>
+  </div>
+  <div class="col-sm-12" >      
+     <app-detail 
+     *ngIf="selectedHoroscope"
+     [horoscope]="selectedHoroscope"></app-detail>          
+  </div>
+</div>
+ 
+
+</body>
+</html>
+
+
